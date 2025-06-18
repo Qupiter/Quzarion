@@ -4,6 +4,7 @@ import { Head, usePage } from '@inertiajs/vue3'
 
 // Get tenant from Inertia props
 const tenant = usePage().props.tenant
+const user = usePage().props.auth.user
 </script>
 
 <template>
@@ -23,11 +24,11 @@ const tenant = usePage().props.tenant
                         You're logged in!
                         <br />
                         <span class="text-sm text-gray-500">
-                            Tenant: <strong>{{ tenant?.name ?? tenant?.id }}</strong>
+                            Tenant: <strong>{{ user?.name }}</strong>
                         </span>
                         <br />
                         <span class="text-sm text-gray-500">
-                            Plan: <strong>{{ tenant?.plan ?? 'N/A' }}</strong>
+                            Plan: <strong>{{ user?.email ?? 'N/A' }}</strong>
                         </span>
                     </div>
                 </div>

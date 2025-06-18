@@ -8,7 +8,7 @@
         "format": "prettier --write resources/",
         "format:check": "prettier --check resources/",
         "lint": "eslint . --fix",
-        "dev-all": "concurrently \"php artisan serve --port=80\" \"npm run dev --host=quzarion.test\""
+        "dev-all": "concurrently \"php artisan serve --port=80\" \"npm run dev\""
     },
     "devDependencies": {
         "@eslint/js": "^9.19.0",

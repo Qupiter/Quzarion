@@ -10,11 +10,11 @@ class InertiaServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Inertia::share('tenant', function () {
-            return tenant()?->only([
+            return tenancy()?->tenant?->only([
                 'id',
                 'tenancy_db_name',
-//                'name',
-//                'plan',
+                'name',
+                'email',
             ]);
         });
     }
