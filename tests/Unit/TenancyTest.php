@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Tenant;
-use App\Models\User;
+use App\Models\Central\Tenant;
+use App\Models\Central\User;
 use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;

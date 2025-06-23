@@ -2,9 +2,8 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Tenant;
+use App\Models\Central\Tenant;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\DB;
 
 class DeleteAllTenants extends Command
 {

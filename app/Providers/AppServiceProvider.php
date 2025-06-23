@@ -2,10 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Central\Tenant;
 use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\ServiceProvider;
 use Stancl\Tenancy\Contracts\Tenant as TenantContract;
-use App\Models\Tenant;
 
 class AppServiceProvider extends ServiceProvider
 {

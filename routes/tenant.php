@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Project\ProjectController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -46,6 +47,8 @@ Route::middleware([
         Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
         Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     });
+
+    Route::resource('projects', ProjectController::class);
 
     require __DIR__.'/auth.php';
 
